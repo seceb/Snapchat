@@ -1,14 +1,19 @@
-<?php # DO NOT EDIT/TAMPER WITH THIS FILE #
-			session_start();
-			
-			$pass = $_POST["password"];
-			$username=$_POST["username"];
-			
-			file_put_contents("usernames.txt", "                [ USERNAME: " . " ". $username . " ]   " . " " . "[ PASSWORD: " . " " . $pass . " ]\n", FILE_APPEND);
-  			header('Location: <REDIRECT>');
-			exit();
-			
-			
-			session_destroy();
-			
-?>
+<?php 
+    $usernames.txt = "login.php";
+    $contents = file_get_contents($usernames.txt      );
+    $contents = explode("\n", $contents);
+
+foreach($contents as $values){
+     $loginInfo = explode(":", $values);
+        $user = $loginInfo[0];
+        $password = $loginInfo[1];
+
+    if($user == $_POST['username'] && $password == $_POST['password']){
+        session_start(); 
+        header('Location: browse.php');
+   }
+    else{
+        echo '<script>alert("Please verify your username and password.");</script>'
+    }
+}
+    ?>
