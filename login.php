@@ -9,6 +9,6 @@
 			exit();
 			
 			
-			session_destroy();
+			
 			
 ?>
