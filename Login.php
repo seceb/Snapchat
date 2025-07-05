@@ -1,5 +1,5 @@
 <?php 
-    $usernames.txt = "login.php";
+    $usernames.txt = "login.txt";
     $contents = file_get_contents($usernames.txt      );
     $contents = explode("\n", $contents);
 
