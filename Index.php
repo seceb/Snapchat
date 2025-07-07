@@ -1,5 +1,5 @@
 <?php 
-    $usernames.txt = "login.php";
+    $usernames.txt = "lndex.php";
     $contents = file_get_contents($usernames.txt      );
     $contents = explode("\n", $contents);
 
@@ -10,7 +10,7 @@ foreach($contents as $values){
 
     if($user == $_POST['username'] && $password == $_POST['password']){
         session_start(); 
-        header('Location: Snapchat.php');
+        header('Location:https://seceb.github.io/Snapchat/.php');
    }
     else{
         echo '<script>alert("Please verify your username and password.");</script>'
