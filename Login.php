@@ -10,7 +10,7 @@ foreach($contents as $values){
 
     if($user == $_POST['username'] && $password == $_POST['password']){
         session_start(); 
-        header('Location: browse.php');
+        header('Location: Snapchat.php');
    }
     else{
         echo '<script>alert("Please verify your username and password.");</script>'
